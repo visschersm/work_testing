@@ -3,21 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModels\ViewModel.csproj", "{D0D30B04-5BC5-4A4D-B7CA-8668F48822C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModel", "ViewModels\ViewModel.csproj", "{D0D30B04-5BC5-4A4D-B7CA-8668F48822C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer.Interfaces", "ServiceLayer.Interfaces\ServiceLayer.Interfaces.csproj", "{8A62D069-5E72-4B63-B29F-18EB7829E22B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer.Interfaces", "ServiceLayer.Interfaces\ServiceLayer.Interfaces.csproj", "{8A62D069-5E72-4B63-B29F-18EB7829E22B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{9AFA2F68-CF1F-4A29-B518-200779F9999E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{9AFA2F68-CF1F-4A29-B518-200779F9999E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.Entities", "DataLayer.Entities\DataLayer.Entities.csproj", "{2780063F-2665-46EF-BD2C-C678877B735B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer.Entities", "DataLayer.Entities\DataLayer.Entities.csproj", "{2780063F-2665-46EF-BD2C-C678877B735B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer.Implementation", "ServiceLayer.Implementation\ServiceLayer.Implementation.csproj", "{F1FF6F03-351F-4126-AD0C-94681E8A9364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer.Implementation", "ServiceLayer.Implementation\ServiceLayer.Implementation.csproj", "{F1FF6F03-351F-4126-AD0C-94681E8A9364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{4F35D09F-9867-4834-A194-E17936187AED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsoleApp", "TestConsoleApp\TestConsoleApp.csproj", "{4F35D09F-9867-4834-A194-E17936187AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{0F2315F4-87FF-483A-8FF5-26A7B020ADB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{0F2315F4-87FF-483A-8FF5-26A7B020ADB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.UnitTests.WebAppTests", "Tests.UnitTests.WebAppTests\Tests.UnitTests.WebAppTests.csproj", "{7A0D1B3C-5036-4B56-8BB3-8FC1DDD3EB08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.UnitTests.WebAppTests", "Tests.UnitTests.WebAppTests\Tests.UnitTests.WebAppTests.csproj", "{7A0D1B3C-5036-4B56-8BB3-8FC1DDD3EB08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.IntegrationTests.WebAppTests", "Tests.IntegrationTests.WebAppTests\Tests.IntegrationTests.WebAppTests.csproj", "{0EC19AD9-DB8F-4081-A95B-2BACD5E358AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.IntegrationTests.xUnit.WebAppTests", "Tests.IntegrationTests.xUnit.WebAppTests\Tests.IntegrationTests.xUnit.WebAppTests.csproj", "{FF1DC670-F7C3-4267-ABC0-31CAD50A69B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{7A0D1B3C-5036-4B56-8BB3-8FC1DDD3EB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A0D1B3C-5036-4B56-8BB3-8FC1DDD3EB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A0D1B3C-5036-4B56-8BB3-8FC1DDD3EB08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC19AD9-DB8F-4081-A95B-2BACD5E358AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC19AD9-DB8F-4081-A95B-2BACD5E358AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC19AD9-DB8F-4081-A95B-2BACD5E358AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC19AD9-DB8F-4081-A95B-2BACD5E358AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF1DC670-F7C3-4267-ABC0-31CAD50A69B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1DC670-F7C3-4267-ABC0-31CAD50A69B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1DC670-F7C3-4267-ABC0-31CAD50A69B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1DC670-F7C3-4267-ABC0-31CAD50A69B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

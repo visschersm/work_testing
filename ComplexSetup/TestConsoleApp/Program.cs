@@ -14,7 +14,7 @@ namespace TestConsoleApp
                 {
                 };
 
-                var newUser = userService.CreateAsync<ViewModel.User.Full>(toCreate);
+
             }
 
         }

@@ -24,25 +24,22 @@ namespace ServiceLayer.Implementation
             _mapper = new Mapper(config);
         }
 
-        public async Task<TView> CreateAsync<TView>(ViewModel.User.Create create)
+        public async Task<TView> CreateAsync<TView>(ViewModel.User.Create toCreate)
         {
-            var newUser = _context.Users.Add(new User
-            {
-                Username = create.Username,
-                Firstname = create.Firstname,
-                Middlename = create.Middlename,
-                Lastname = create.Lastname
-            }).Entity;
-            await _context.SaveChangesAsync();
+            var newUser = _mapper.Map<User>(toCreate);
+            var createdUser = _context.Users.Add(newUser).Entity;
+            var result = await _context.SaveChangesAsync();
 
-            return _mapper.Map<TView>(newUser);
+            return _mapper.Map<TView>(createdUser);
         }
 
         public async Task<IEnumerable<TView>> GetAsync<TView>()
         {
-            var data = _context.Users.AsNoTracking();
+            var result = await _context.Users.ToArrayAsync();
 
-            return await _mapper.ProjectTo<TView>(data).ToArrayAsync();
+            return await _mapper.ProjectTo<TView>(_context.Users).ToArrayAsync();
         }
+
+
     }
 }

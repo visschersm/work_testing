@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TestWebApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -15,14 +15,20 @@ namespace TestWebApp.Controllers
             _userService = userService;
         }
 
-        public async Task<IActionResult> CreateAsync(ViewModel.User.Create toCreate)
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync(ViewModel.User.Create create)
         {
-            return Ok(_userService.CreateAsync<ViewModel.User.Full>(toCreate));
+            var result = await _userService.CreateAsync<ViewModel.User.Full>(create);
+
+            return Ok(result);
         }
 
+        [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
-            return Ok(_userService.GetAsync<ViewModel.User.List>());
+            var result = await _userService.GetAsync<ViewModel.User.List>();
+
+            return Ok(result);
         }
     }
 }

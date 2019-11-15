@@ -9,6 +9,7 @@ namespace ServiceLayer.Implementation.MappingProfiles
         {
             CreateMap<ViewModel.User.Create, User>();
             CreateMap<User, ViewModel.User.Full>();
+            CreateMap<User, ViewModel.User.List>();
         }
     }
 }

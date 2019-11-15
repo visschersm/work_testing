@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using DataLayer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using ServiceLayer.Implementation;
+using ServiceLayer.Interfaces;
 
 namespace TestWebApp
 {
@@ -25,6 +22,15 @@ namespace TestWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IContext, TestContext>();
+
+            services.AddDbContext<TestContext>(options =>
+            {
+                options.UseNpgsql("Server=127.0.0.1;Database=TestDatabase;Username=postgres;Password=mysecretpassword");
+            });
+
+            services.AddScoped<IUserService, UserService>();
+
             services.AddControllers();
         }
 
